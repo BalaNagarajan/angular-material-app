@@ -1,0 +1,110 @@
+<mat-toolbar color="primary">
+  <span>Person Search Demo</span>
+  <!-- This fills the remaining space of the current row -->
+  <span class="example-fill-remaining-space"></span>
+
+
+
+<br><br><br><br><br><br>
+ 
+<button mat-icon-button [matMenuTriggerFor]="menu">
+    <mat-icon>more_vert</mat-icon>
+</button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item>
+    <mat-icon>face</mat-icon>
+    <span>Profile</span>
+  </button>
+  <button mat-menu-item>
+    <mat-icon>settings</mat-icon>
+    <span>Settings</span>
+  </button>
+</mat-menu> 
+</mat-toolbar>
+
+ 
+
+
+<mat-accordion class="example-headers-align">
+  <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle="true">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Person Name Search
+      </mat-panel-title>
+      <mat-panel-description>
+        
+        <mat-icon>account_circle</mat-icon>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <mat-form-field>
+      <input matInput placeholder="First name"/>
+    </mat-form-field>
+  <mat-form-field>
+      <input matInput placeholder="Last name"/>
+  </mat-form-field>
+  <mat-form-field>
+      <input matInput placeholder="Middle name"/>
+   </mat-form-field>
+
+
+    
+    
+  </mat-expansion-panel>
+
+  <mat-expansion-panel [expanded]="step === 1" (opened)="setStep(1)" hideToggle="true">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Person Address Search
+      </mat-panel-title>
+      <mat-panel-description>
+        <mat-icon>map</mat-icon>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <mat-form-field>
+      <input matInput placeholder="Address Line1">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="City">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="State">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Zipcode">
+    </mat-form-field>
+
+  
+  </mat-expansion-panel>
+
+  <mat-expansion-panel [expanded]="step === 2" (opened)="setStep(2)" hideToggle="true">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Person DOB Search
+      </mat-panel-title>
+      <mat-panel-description>
+        <mat-icon>date_range</mat-icon>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+     <mat-form-field>
+      <input matInput placeholder="DOB">
+    </mat-form-field>
+  
+
+    
+  </mat-expansion-panel>
+
+</mat-accordion>
+<br><br>
+<div style="text-align: left">
+    <button mat-raised-button color="primary">Search</button>
+</div>
+<br><br>
+<mat-list dense>
+ <mat-list-item> Pepper </mat-list-item>
+ <mat-list-item> Salt </mat-list-item>
+ <mat-list-item> Paprika </mat-list-item>
+</mat-list>
+
+
