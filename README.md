@@ -1,3 +1,22 @@
+User Instructions:
+===================
+npm install
+
+To install various material libraries
+
+1. ng new menubar-material
+2. npm install --save @angular/material
+3. npm install --save @angular/animations
+ npm install --save @angular/cdk
+ 
+ npm install --save hammerjs
+4. ng generate component main (create a component under app)
+5. ng generate component signin (create a component under app)
+6. ng generate component myposts (create a component under app)
+7. ng generate component signin (create a component under app)
+
+
+
 # MaterialApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.4.
